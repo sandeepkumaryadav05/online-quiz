@@ -85,8 +85,12 @@ online-quiz/
 └── README.md
 
 ---
+                                            
 
 ## ✍️ Author:-
 
-Made by [Sandeep Kumar Yadav] – Full Stack Web Dev Project
+👤 Sandeep Kumar Yadav
+
+GitHub: @sandeepkumaryadav05
+Email: sandeepyadav051003@gmail.com
 
