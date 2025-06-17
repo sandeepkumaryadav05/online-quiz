@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result</title>
+  <link rel="stylesheet" href="/result.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Score</h1>
+    <div class="score"><%= score %> / <%= total %></div>
+
+    <% 
+      let message = "";
+      if (score === total) {
+        message = "Excellent! You got all questions right!";
+      } else if (score > total / 2) {
+        message = "Good job! Try again to get a perfect score.";
+      } else {
+        message = "Keep practicing and you'll improve!";
+      }
+    %>
+    <div class="summary">
+      <%= message %>
+    </div>
+
+    <h2>Question Review</h2>
+    <ol>
+      <% questions.forEach(function(q, i) { %>
+        <% 
+          var userAns = String(userAnswers[q.id] || '').trim();
+          var correctAns = String(q.answer).trim();
+          var isCorrect = userAns === correctAns;
+        %>
+        <li>
+          <strong><%= q.question %></strong><br>
+          Your answer: 
+         <span class="<%= isCorrect ? 'correct' : 'wrong' %>">
+          <%= userAns || "No answer" %>
+         </span>
+          <br>
+          Correct answer: <%= correctAns %>
+          <% if (isCorrect) { %>
+            <span style="color:green;">&#10004; Correct</span>
+          <% } else { %>
+            <span style="color:red;">&#10008; Wrong</span>
+          <% } %>
+        </li>
+      <% }); %>
+    </ol>
+
+    <a href="/" class="btn-home">Go to Home</a>
+  </div>
+</body>
+</html>

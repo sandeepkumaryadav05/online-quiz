@@ -1,0 +1,50 @@
+.score {
+      font-size: 2.2rem;
+      color: #357ae8;
+      font-weight: bold;
+      margin: 24px 0 12px 0;
+      text-align: center;
+    }
+    .summary {
+      font-size: 1.2rem;
+      color: #2d3a4b;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .container {
+      max-width: 400px;
+      margin: 60px auto;
+      background: #f4c7c7;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 32px 28px 24px 28px;
+      text-align: center;
+    }
+    h1 {
+      color: #4f8cff;
+      margin-bottom: 18px;
+    }
+    .btn-home {
+      display: inline-block;
+      margin-top: 24px;
+      background: #4f8cff;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-home:hover {
+      background: #357ae8;
+    }
+
+    .correct {
+       color: green;
+      }
+   .wrong {
+    color: red;
+    }

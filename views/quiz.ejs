@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .question { display: none; }
+    .question.active { display: block; }
+    .nav-buttons { margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Online Quiz</h1>
+    <form id="quizForm" action="/submit" method="POST">
+      <% questions.forEach((q, index) => { %>
+        <div class="question<%= index === 0 ? ' active' : '' %>">
+          <h3><%= index + 1 %>. <%= q.question %></h3>
+          <div class="options">
+            <label>
+              <input type="radio" name="<%= q.id %>" value="<%= q.option1 %>" required>
+              <%= q.option1 %>
+            </label>
+            <label>
+              <input type="radio" name="<%= q.id %>" value="<%= q.option2 %>">
+              <%= q.option2 %>
+            </label>
+            <label>
+              <input type="radio" name="<%= q.id %>" value="<%= q.option3 %>">
+              <%= q.option3 %>
+            </label>
+            <label>
+              <input type="radio" name="<%= q.id %>" value="<%= q.option4 %>">
+              <%= q.option4 %>
+            </label>
+          </div>
+        </div>
+      <% }); %>
+      <div class="nav-buttons">
+        <button type="button" id="prevBtn" disabled>Previous</button>
+        <button type="button" id="nextBtn">Next</button>
+        <button type="submit" id="submitBtn" style="display:none;">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script src="/quiz.js"></script>
+</body>
+
+</html>
