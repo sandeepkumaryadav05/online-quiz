@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Sandy.051003",
+  password: "xxxx",
   database: "quizDB"
 });
 
